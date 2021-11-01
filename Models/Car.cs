@@ -20,7 +20,7 @@ namespace SimpleMVCApplication.Models
 
         public Transmission TransmissionType { get; set; }
 
-        public string HorsePower { get; set; }
+        public int HorsePower { get; set; }
 
         public int MaximumSpeed { get; set; }
 
@@ -38,7 +38,7 @@ namespace SimpleMVCApplication.Models
 
         public enum CarType
         {
-            Sedan,
+            Sedan = 1,
             Coupe,
             Convertible,
             SUV,
@@ -47,7 +47,7 @@ namespace SimpleMVCApplication.Models
 
         public enum Transmission
         {
-            Automatic,
+            Automatic = 1,
             Manual,
             Tiptronic
         }

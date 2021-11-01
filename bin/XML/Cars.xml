@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Cars>
+  <Car>
+    <Id>1</Id>
+    <Brand>BMW</Brand>
+    <Model>Z4</Model>
+    <Colour>Silver</Colour>
+    <TypeofCar>5</TypeofCar>
+    <Transmission>1</Transmission>
+    <HorsePower>335</HorsePower>
+    <MaximumSpeed>250</MaximumSpeed>
+    <Mileage>14 Km/Litre</Mileage>
+    <Price>45000</Price>
+    <Description>The BMW Z4 is a sporty convertible for those that like to enjoy motoring. 
+    It has all the latest safety features and all the conveniences desired in a modern car, including 4 cup holders!</Description>
+    <ImageURL>Images/BMW Z4.jpg</ImageURL>    
+  </Car>
+  <Car>
+    <Id>2</Id>
+    <Brand>Kia</Brand>
+    <Model>Sportage</Model>
+    <Colour>Red</Colour>
+    <TypeofCar>4</TypeofCar>
+    <Transmission>1</Transmission>
+    <HorsePower>181</HorsePower>
+    <MaximumSpeed>180</MaximumSpeed>
+    <Mileage>11.5 Km/Litre</Mileage>
+    <Price>25000</Price>
+    <Description>A stunning SUV that is both comfortable and eye catching, the Kia Sportage should be part of any family.
+    Comfortable over short distances as well as long distances, the Sportage can be used for everything from shopping to inter city
+  driving and beyond.</Description>
+    <ImageURL>Images/KIA Sportage.jpg</ImageURL>
+  </Car>
+  <Car>
+    <Id>3</Id>
+    <Brand>Mazda</Brand>
+    <Model>MX 5</Model>
+    <Colour>Red</Colour>
+    <TypeofCar>5</TypeofCar>
+    <Transmission>2</Transmission>
+    <HorsePower>181</HorsePower>
+    <MaximumSpeed>217</MaximumSpeed>
+    <Mileage>12/5 Km/Litre</Mileage>
+    <Price>30040</Price>
+    <Description>The Mazda MX-5 is a sporty little convertible that makes driving very fun.</Description>
+    <ImageURL>Images/Mazda MX5.jpg</ImageURL>
+  </Car>
+  <Car>
+    <Id>4</Id>
+    <Brand>Lamborghini</Brand>
+    <Model>Gallardo</Model>
+    <Colour>White</Colour>
+    <TypeofCar>2</TypeofCar>
+    <Transmission>3</Transmission>
+    <HorsePower>550</HorsePower>
+    <MaximumSpeed>309</MaximumSpeed>
+    <Mileage>6.4 Km/Litre</Mileage>
+    <Price>120000</Price>
+    <Description>The Lamborghini Gallardo is the most powerful car in the entire world and will blow your hair clean off! 
+    So do ya feel lucky...punk?</Description>
+    <ImageURL>Images/Lamborghini.jpg</ImageURL>
+  </Car>
+  <Car>
+    <Id>5</Id>
+    <Brand>Audi</Brand>
+    <Model>TT</Model>
+    <Colour>Red</Colour>
+    <TypeofCar>3</TypeofCar>
+    <Transmission>1</Transmission>
+    <HorsePower>228</HorsePower>
+    <MaximumSpeed>243</MaximumSpeed>
+    <Mileage>11.11 Km/Litre</Mileage>
+    <Price>53750</Price>
+    <Description>The Audi TT is a fun little convertible to drive around your friends or to go to the office. 
+    It can take you to the supermarket but it doesn't have a lot of boot capacity to store much groceries.  </Description>
+    <ImageURL>Images/Audi TT.jpg</ImageURL>
+  </Car>
+  
+  
+</Cars>

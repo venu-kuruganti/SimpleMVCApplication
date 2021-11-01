@@ -11,7 +11,9 @@ namespace SimpleMVCApplication.Controllers
     {
         public ActionResult Home()
         {
-            List<Car> cars = Cars.GetCars();                        
+            string Path = Server.MapPath("../XML/Cars.xml");
+
+            List<Car> cars = Cars.GetCars(Path);                        
             
             return View(cars);
 
