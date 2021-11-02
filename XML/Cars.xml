@@ -14,7 +14,7 @@
     <Price>45000</Price>
     <Description>The BMW Z4 is a sporty convertible for those that like to enjoy motoring. 
     It has all the latest safety features and all the conveniences desired in a modern car, including 4 cup holders!</Description>
-    <ImageURL>Images/BMW Z4.jpg</ImageURL>    
+    <ImageURL>../Images/BMW Z4.jpg</ImageURL>    
   </Car>
   <Car>
     <Id>2</Id>
@@ -30,7 +30,7 @@
     <Description>A stunning SUV that is both comfortable and eye catching, the Kia Sportage should be part of any family.
     Comfortable over short distances as well as long distances, the Sportage can be used for everything from shopping to inter city
   driving and beyond.</Description>
-    <ImageURL>Images/KIA Sportage.jpg</ImageURL>
+    <ImageURL>../Images/KIA Sportage.jpg</ImageURL>
   </Car>
   <Car>
     <Id>3</Id>
@@ -44,7 +44,7 @@
     <Mileage>12/5 Km/Litre</Mileage>
     <Price>30040</Price>
     <Description>The Mazda MX-5 is a sporty little convertible that makes driving very fun.</Description>
-    <ImageURL>Images/Mazda MX5.jpg</ImageURL>
+    <ImageURL>../Images/Mazda MX5.jpg</ImageURL>
   </Car>
   <Car>
     <Id>4</Id>
@@ -59,7 +59,7 @@
     <Price>120000</Price>
     <Description>The Lamborghini Gallardo is the most powerful car in the entire world and will blow your hair clean off! 
     So do ya feel lucky...punk?</Description>
-    <ImageURL>Images/Lamborghini.jpg</ImageURL>
+    <ImageURL>../Images/Lamborghini.jpg</ImageURL>
   </Car>
   <Car>
     <Id>5</Id>
@@ -74,7 +74,7 @@
     <Price>53750</Price>
     <Description>The Audi TT is a fun little convertible to drive around your friends or to go to the office. 
     It can take you to the supermarket but it doesn't have a lot of boot capacity to store much groceries.  </Description>
-    <ImageURL>Images/Audi TT.jpg</ImageURL>
+    <ImageURL>../Images/Audi TT.jpg</ImageURL>
   </Car>
   
   

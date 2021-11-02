@@ -4,78 +4,62 @@
     ViewBag.Title = "Home";
 }
 
-<h2>Home</h2>
+<div class="container-fluid border border-primary">
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Brand)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Model)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.HorsePower)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MaximumSpeed)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Mileage)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Colour)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Price)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ImageURL)
-        </th>
-        <th></th>
-    </tr>
+    <div class="row align-items-center border border-primary p-2">
+        <div class="col-2 text-center">
+            Photo
+        </div>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Brand)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Model)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HorsePower)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MaximumSpeed)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Mileage)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Colour)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Price)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ImageURL)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
+        <div class="col-2 text-center">
+            Brand and Model
+        </div>
 
-</table>
+        <div class="col-2 text-center">
+            Car Type
+        </div>
+
+        <div class="col-1 text-center">
+            Transmission
+        </div>  
+
+        <div class="col-1 text-center">
+            Price
+        </div>
+
+        <div  class="col-4 text-left">
+            Description
+        </div>    
+
+    </div>
+
+    @foreach (SimpleMVCApplication.Models.Car car in Model)
+    {
+<div class="row border border-secondary align-items-center p-2">
+    <div class="col-2 text-center">
+        <img src="@car.ImageURL" height="100" alt="Car Photo" />
+    </div>
+
+    <div class="col-2 text-center">
+        @car.Brand - @car.Model
+    </div>
+
+    <div class="col-2 text-center">
+        @car.TypeofCar
+    </div>
+
+    <div class="col-1 text-center">
+        @car.TransmissionType
+    </div>
+
+    <div class="col-1 text-center">
+        @car.Price
+    </div>
+
+    <div class="col-4 text-left">
+        @car.Description
+    </div>   
+</div>
+    }
+
+</div>
