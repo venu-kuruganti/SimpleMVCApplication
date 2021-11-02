@@ -19,6 +19,15 @@ namespace SimpleMVCApplication.Controllers
 
         }
 
+        public ActionResult DetailView()   //Car car
+        {
+            string Path = Server.MapPath("../XML/Cars.xml");
+
+            List<Car> cars = Cars.GetCars(Path);
+
+            return View(cars[0]);
+        }
+
       
     }
 }

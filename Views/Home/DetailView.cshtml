@@ -1,0 +1,81 @@
+﻿@model SimpleMVCApplication.Models.Car
+
+<div class="card" style="width:600px">
+    <img src="@Model.ImageURL" alt="CarImage" class="card-img-top" />
+    <div class="card-body">
+        <h4 class="card-title">@Model.Brand - @Model.Model </h4>
+        <p class="card-text">@Model.Description</p>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col-6">
+                    Colour
+                </div>
+                <div class="col-6">
+                    @Model.Colour
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col-6">
+                    Car Type
+                </div>
+                <div class="col-6">
+                    @Model.TypeofCar
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col-6">
+                    Transmission
+                </div>
+                <div class="col-6">
+                    @Model.TransmissionType
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col-6">
+                    Horsepower
+                </div>
+                <div class="col-6">
+                    @Model.HorsePower bHP
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col-6">
+                    Maximum Speed
+                </div>
+                <div class="col-6">
+                    @Model.MaximumSpeed Km/Hr
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col-6">
+                    Mileage / Fuel Economy
+                </div>
+                <div class="col-6">
+                    @Model.Mileage
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col-6">
+                    Price (in Euros)
+                </div>
+                <div class="col-6">
+                    @String.Format("€ {0:N2}", Model.Price)
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

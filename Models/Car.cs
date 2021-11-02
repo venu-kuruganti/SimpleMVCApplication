@@ -42,7 +42,7 @@ namespace SimpleMVCApplication.Models
             Coupe,
             Convertible,
             SUV,
-            RoadsterConvertible
+            Roadster
         }
 
         public enum Transmission
