@@ -7,11 +7,11 @@
 <div class="container-fluid border border-primary">
 
     <div class="row align-items-center border border-primary p-2">
-        <div class="col-2 text-center">
+        <div class="col-3 text-center">
             Photo
         </div>
 
-        <div class="col-2 text-center">
+        <div class="col-3 text-center">
             Brand and Model
         </div>
 
@@ -19,28 +19,26 @@
             Car Type
         </div>
 
-        <div class="col-1 text-center">
+        <div class="col-2 text-center">
             Transmission
         </div>  
 
-        <div class="col-1 text-center">
+        <div class="col-2 text-center">
             Price
-        </div>
-
-        <div  class="col-4 text-left">
-            Description
-        </div>    
+        </div>      
 
     </div>
 
-    @foreach (SimpleMVCApplication.Models.Car car in Model)
+    @foreach (var car in Model)
     {
 <div class="row border border-secondary align-items-center p-2">
-    <div class="col-2 text-center">
-        <img src="@car.ImageURL" height="100" alt="Car Photo" />
+    <div class="col-3 text-center">        
+        <img src="@car.ImageURL" class="img-thumbnail CarImage" data-bs-toggle="modal" 
+             data-bs-target="#CarDetailsModal"
+             id="@car.Id" height="100" alt="Car Photo" />        
     </div>
 
-    <div class="col-2 text-center">
+    <div class="col-3 text-center">
         @car.Brand - @car.Model
     </div>
 
@@ -48,18 +46,60 @@
         @car.TypeofCar
     </div>
 
-    <div class="col-1 text-center">
+    <div class="col-2 text-center">
         @car.TransmissionType
     </div>
 
-    <div class="col-1 text-center">
+    <div class="col-2 text-center">
         @String.Format("€{0:N2}", car.Price)
     </div>
-
-    <div class="col-4 text-left">
-        @car.Description
-    </div>   
+    
 </div>
     }
 
 </div>
+
+<div class="modal fade" id="CarDetailsModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header"> 
+                <h4>Details</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body CarModalBody">
+
+            </div>           
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script type="text/javascript">
+
+        $(".CarImage").click(function () {
+            ShowCarDetails(this.id);
+        });
+
+        function ShowCarDetails(Id) {
+
+            console.log(`In ShowCarDetails with Id : ${Id}`);
+
+            $.ajax({
+                type: 'GET',
+                url: '@Url.Action("DetailView", "Home")',
+                data: { CarId: Id },
+                success: function (data) {
+                    //Success
+                    $(".CarModalBody").html(data);
+
+                },
+                error: function (errMesg) {
+                    console.log(errMesg);
+                }
+            });            
+        }
+
+
+    </script>
+
+    }
+

@@ -12,20 +12,24 @@ namespace SimpleMVCApplication.Controllers
         public ActionResult Home()
         {
             string Path = Server.MapPath("../XML/Cars.xml");
-
-            List<Car> cars = Cars.GetCars(Path);                        
+            List<Car> cars = null;
+            if (Session["Cars"]==null || Session["Cars"].ToString() == string.Empty)
+            {
+               cars = Cars.GetCars(Path);
+                Session["Cars"] = cars;               
+            }                              
             
             return View(cars);
 
         }
 
-        public ActionResult DetailView()   //Car car
+        public ActionResult DetailView(int CarId)   //Car car
         {
-            string Path = Server.MapPath("../XML/Cars.xml");
+            List<Car> cars = (List<Car>) Session["Cars"];
 
-            List<Car> cars = Cars.GetCars(Path);
+            Car car = cars.Where(c=>c.Id== CarId).FirstOrDefault();
 
-            return View(cars[0]);
+            return View(car);
         }
 
       
