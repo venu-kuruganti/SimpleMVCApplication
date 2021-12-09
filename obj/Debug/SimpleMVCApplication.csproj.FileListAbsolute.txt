@@ -60,3 +60,4 @@ C:\Users\venuk\Documents\Personal\Personal Projects\SimpleMVCApplication\bin\ros
 C:\Users\venuk\Documents\Personal\Personal Projects\SimpleMVCApplication\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\venuk\Documents\Personal\Personal Projects\SimpleMVCApplication\obj\Debug\SimpleMVCApplication.csproj.CopyComplete
 C:\Users\venuk\Documents\Personal\Personal Projects\SimpleMVCApplication\bin\Views\Home\Home.cshtml
+C:\Users\venuk\Documents\Personal\Personal Projects\SimpleMVCApplication\bin\Content\Site.css

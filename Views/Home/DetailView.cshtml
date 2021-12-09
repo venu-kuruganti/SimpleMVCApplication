@@ -1,6 +1,6 @@
 ﻿@model SimpleMVCApplication.Models.Car
 
-<div class="card" style="width:600px">
+<div class="card car-details w-100">
     <img src="@Model.ImageURL" alt="CarImage" class="card-img-top" />
     <div class="card-body">
         <h4 class="card-title">@Model.Brand - @Model.Model </h4>
@@ -9,7 +9,7 @@
     <ul class="list-group list-group-flush">
         <li class="list-group-item">
             <div class="row">
-                <div class="col-6">
+                <div class="col-6 list-group-label">
                     Colour
                 </div>
                 <div class="col-6">
@@ -19,7 +19,7 @@
         </li>
         <li class="list-group-item">
             <div class="row">
-                <div class="col-6">
+                <div class="col-6 list-group-label">
                     Car Type
                 </div>
                 <div class="col-6">
@@ -29,7 +29,7 @@
         </li>
         <li class="list-group-item">
             <div class="row">
-                <div class="col-6">
+                <div class="col-6 list-group-label">
                     Transmission
                 </div>
                 <div class="col-6">
@@ -39,7 +39,7 @@
         </li>
         <li class="list-group-item">
             <div class="row">
-                <div class="col-6">
+                <div class="col-6 list-group-label">
                     Horsepower
                 </div>
                 <div class="col-6">
@@ -49,7 +49,7 @@
         </li>
         <li class="list-group-item">
             <div class="row">
-                <div class="col-6">
+                <div class="col-6 list-group-label">
                     Maximum Speed
                 </div>
                 <div class="col-6">
@@ -59,7 +59,7 @@
         </li>
         <li class="list-group-item">
             <div class="row">
-                <div class="col-6">
+                <div class="col-6 list-group-label">
                     Mileage / Fuel Economy
                 </div>
                 <div class="col-6">
@@ -69,7 +69,7 @@
         </li>
         <li class="list-group-item">
             <div class="row">
-                <div class="col-6">
+                <div class="col-6 list-group-label">
                     Price (in Euros)
                 </div>
                 <div class="col-6">

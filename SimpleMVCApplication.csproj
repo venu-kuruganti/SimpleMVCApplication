@@ -143,10 +143,11 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
-    <Content Include="CSS\CarsStyle.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
+    <Content Include="Content\Site.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\Audi TT.jpg" />
     <Content Include="Images\BMW Z4.jpg" />
     <Content Include="Images\KIA Sportage.jpg" />
@@ -190,6 +191,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="CSS\" />
     <Folder Include="CustomScripts\" />
   </ItemGroup>
   <ItemGroup>
