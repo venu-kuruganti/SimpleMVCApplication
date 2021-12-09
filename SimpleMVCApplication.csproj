@@ -183,7 +183,9 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Home.cshtml" />
+    <Content Include="Views\Home\Home.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Views\Home\DetailView.cshtml" />
   </ItemGroup>
   <ItemGroup>

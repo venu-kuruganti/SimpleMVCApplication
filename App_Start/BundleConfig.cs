@@ -24,7 +24,8 @@ namespace SimpleMVCApplication
 
             bundles.Add(new Bundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/CSS/CarsStyle.css"));
         }
     }
 }

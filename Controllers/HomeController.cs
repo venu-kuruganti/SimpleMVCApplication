@@ -9,15 +9,21 @@ namespace SimpleMVCApplication.Controllers
 {
     public class HomeController : Controller
     {
+        [HttpGet]
         public ActionResult Home()
         {
             string Path = Server.MapPath("../XML/Cars.xml");
-            List<Car> cars = null;
-            if (Session["Cars"]==null || Session["Cars"].ToString() == string.Empty)
+           
+            Cars cars = new Cars();
+            cars.DocumentPath = Path;
+
+            if (Session["Cars"] == null)
             {
-               cars = Cars.GetCars(Path);
-                Session["Cars"] = cars;               
-            }                              
+                cars.PopulateCars();
+                Session["Cars"] = cars;
+            }
+            else
+                cars = (Cars)Session["Cars"];
             
             return View(cars);
 
@@ -25,9 +31,9 @@ namespace SimpleMVCApplication.Controllers
 
         public ActionResult DetailView(int CarId)   //Car car
         {
-            List<Car> cars = (List<Car>) Session["Cars"];
+            Cars cars = (Cars) Session["Cars"];
 
-            Car car = cars.Where(c=>c.Id== CarId).FirstOrDefault();
+            Car car = cars.MyCars.Where(c=>c.Id== CarId).FirstOrDefault();
 
             return View(car);
         }

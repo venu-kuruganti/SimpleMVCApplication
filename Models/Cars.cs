@@ -6,13 +6,21 @@ using System.Xml;
 
 namespace SimpleMVCApplication.Models
 {
-    public static class Cars
+    public class Cars
     {
-        public static List<Car> GetCars(string documentPath)
-        {
-            //This is temporary code
-            List<Car> MyCars = new List<Car>();
+        public List<Car> MyCars { get; set; }
 
+        public string DocumentPath { get; set; }
+
+        public Cars()
+        {
+            MyCars = new List<Car>();
+
+            DocumentPath = String.Empty;
+        }
+
+        private List<Car> GetCars()
+        {
 
             //Car car = new Car();
             //car.Id = 1;
@@ -55,7 +63,7 @@ namespace SimpleMVCApplication.Models
             //MyCars.Add(car);
 
             XmlDocument document = new XmlDocument();
-            document.Load(documentPath);
+            document.Load(DocumentPath);
 
             foreach (XmlNode node in document.DocumentElement.ChildNodes)
             {
@@ -123,5 +131,20 @@ namespace SimpleMVCApplication.Models
 
             return MyCars;
         }
+
+        public void PopulateCars()
+        {
+            if (string.IsNullOrEmpty(DocumentPath))
+            {
+                throw new ApplicationException("Error! XML Document Path is empty!");
+            }
+            else
+            {
+                if (MyCars.Count > 0)
+                    MyCars.Clear();
+
+                MyCars = GetCars();
+            }
+        }//End of function populate cars
     }
 }
