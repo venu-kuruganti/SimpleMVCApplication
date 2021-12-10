@@ -40,6 +40,10 @@ h2{
     cursor:pointer;
 }
 
+.form-control{
+    width:250px;
+}
+
 .car-details {
     padding: 25px;
     background-color: #643EBF;

@@ -12,7 +12,15 @@ namespace SimpleMVCApplication.Controllers
         [HttpGet]
         public ActionResult Home()
         {
-            string Path = Server.MapPath("../XML/Cars.xml");
+            string Path;
+            try
+            {
+                Path = Server.MapPath("../XML/Cars.xml");
+            }
+            catch
+            {
+                Path = Server.MapPath("XML/Cars.xml");
+            }                
            
             Cars cars = new Cars();
             cars.DocumentPath = Path;

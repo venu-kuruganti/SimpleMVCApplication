@@ -7,7 +7,7 @@
 <h2>Add A New Car</h2>
 
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm("GetForm", "AddCar", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
     
@@ -42,7 +42,7 @@
     <div class="form-group">
         @Html.LabelFor(model => model.TypeofCar, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.DropDownListFor(model => model.TypeofCar, (SelectList)ViewBag.CarTypes, new { @class = "form-control" })
+            @Html.DropDownListFor(model => model.TypeofCar, (SelectList)ViewBag.CarTypes, "--Please Select Car Type--", new { @class = "form-control" })
             @Html.ValidationMessageFor(model => model.TypeofCar, "", new { @class = "text-danger" })
         </div>
     </div>
@@ -50,7 +50,7 @@
     <div class="form-group">
         @Html.LabelFor(model => model.TransmissionType, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.DropDownListFor(model => model.TransmissionType, (SelectList)ViewBag.TransmissionTypes, new { @class = "form-control"})
+            @Html.DropDownListFor(model => model.TransmissionType, (SelectList)ViewBag.TransmissionTypes, "--Please Select Transmission Type--", new { @class = "form-control"})
             @Html.ValidationMessageFor(model => model.TransmissionType, "", new { @class = "text-danger" })
         </div>
     </div>
@@ -80,7 +80,7 @@
     <div class="form-group">
         @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.TextAreaFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.TextAreaFor(model => model.Description, new { htmlAttributes = new { @class = "form-control", cols = "50", rows = "100" } })
             @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
         </div>
     </div>
@@ -94,9 +94,9 @@
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(model => model.ImageURL, htmlAttributes: new { @class = "control-label col-md-2" })
+        @Html.LabelFor(model => model.CarImage, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.TextBox("ImageURL", "", new {type="file"})
+            <input type="file" name="CarImage" class="form-control" required value="" />
         </div>
     </div>
 

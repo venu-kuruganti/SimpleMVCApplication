@@ -50,7 +50,11 @@ namespace SimpleMVCApplication.Models
         [Display(Name ="Price")]
         [Range(10000, 1000000)]
         public double Price { get; set; }
-        
+
+        [Required]
+        [Display(Name = "Car Photo")]
+        public HttpPostedFileBase CarImage { get; set; }
+
         public string ImageURL { get; set; }
 
         public Car() {  /* Default constructor */  }
@@ -80,18 +84,18 @@ namespace SimpleMVCApplication.Models
 
 
                 XmlDocument XDoc = new XmlDocument();
-                XDoc.LoadXml(Path);
+                XDoc.Load(Path);
+                int lastId = Convert.ToInt32(XDoc.LastChild.LastChild.ChildNodes[0].InnerText); //for creating a new ID
 
                 XmlNode node = XDoc.CreateNode(XmlNodeType.Element, "Car", null);
 
                 XmlNode child = XDoc.CreateNode(XmlNodeType.Element, "Id", null);
-                child.InnerText = Id.ToString();
+                child.InnerText = (++lastId).ToString();
                 node.AppendChild(child);
 
                 child = XDoc.CreateNode(XmlNodeType.Element, "Brand", null);
                 child.InnerText = Brand;
                 node.AppendChild(child);
-
 
                 child = XDoc.CreateNode(XmlNodeType.Element, "Model", null);
                 child.InnerText = Model;
@@ -102,23 +106,22 @@ namespace SimpleMVCApplication.Models
                 child.InnerText = Colour;
                 node.AppendChild(child);
 
-
                 child = XDoc.CreateNode(XmlNodeType.Element, "TypeofCar", null);
-                child.InnerText = TypeofCar.ToString();
+                child.InnerText =  ((int)TypeofCar).ToString();
                 node.AppendChild(child);
 
 
                 child = XDoc.CreateNode(XmlNodeType.Element, "Transmission", null);
-                child.InnerText = TransmissionType.ToString();
+                child.InnerText = ((int)TransmissionType).ToString();
                 node.AppendChild(child);
 
 
-                child = XDoc.CreateNode(XmlNodeType.Element, "Horsepower", null);
+                child = XDoc.CreateNode(XmlNodeType.Element, "HorsePower", null);
                 child.InnerText = HorsePower.ToString();
                 node.AppendChild(child);
 
 
-                child = XDoc.CreateNode(XmlNodeType.Element, "MaxmimumSpeed", null);
+                child = XDoc.CreateNode(XmlNodeType.Element, "MaximumSpeed", null);
                 child.InnerText = MaximumSpeed.ToString();
                 node.AppendChild(child);
 
