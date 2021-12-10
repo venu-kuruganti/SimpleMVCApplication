@@ -5,26 +5,28 @@
     ViewBag.Title = "Home";
 }
 
-<div class="container-fluid border border-primary">
+<h2>CARS</h2>
 
-    <div class="row align-items-center border border-primary p-2">
-        <div class="col-3 text-center">
+<div class="container-fluid">
+
+    <div class="row align-items-center border border-1 p-2">
+        <div class="col-3 text-center table-header">
             Photo
         </div>
 
-        <div class="col-3 text-center">
+        <div class="col-3 text-center table-header">
             Brand and Model
         </div>
 
-        <div class="col-2 text-center">
+        <div class="col-2 text-center table-header">
             Car Type
         </div>
 
-        <div class="col-2 text-center">
+        <div class="col-2 text-center table-header">
             Transmission
         </div>  
 
-        <div class="col-2 text-center">
+        <div class="col-2 text-center table-header">
             Price
         </div>      
 
@@ -32,7 +34,7 @@
     
     @foreach (Car car in Model.MyCars)
     {
-<div class="row border border-secondary align-items-center p-2">
+<div class="row border border-1 align-items-center p-3">
     <div class="col-3 text-center">        
         <img src="@car.ImageURL" class="img-thumbnail CarImage" data-bs-toggle="modal" 
              data-bs-target="#CarDetailsModal"
@@ -52,7 +54,7 @@
     </div>
 
     <div class="col-2 text-center">
-        @String.Format("€{0:N2}", car.Price)
+        @String.Format("€ {0:N2}", car.Price)
     </div>
     
 </div>
