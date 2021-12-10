@@ -74,33 +74,5 @@
     <Description>The Audi TT is a fun little convertible to drive around your friends or to go to the office. 
     It can take you to the supermarket but it doesn't have a lot of boot capacity to store much groceries.  </Description>
     <ImageURL>../Images/Audi TT.jpg</ImageURL>
-  </Car>
-  <Car>
-    <Id>6</Id>
-    <Brand>BMW</Brand>
-    <Model>4 Series</Model>
-    <Colour>Red</Colour>
-    <TypeofCar>2</TypeofCar>
-    <Transmission>1</Transmission>
-    <Horsepower>350</Horsepower>
-    <MaxmimumSpeed>250</MaxmimumSpeed>
-    <Mileage>12</Mileage>
-    <Price>35750</Price>
-    <Description>The BMW 4 Series Coupe is a nice balance between sportiness and comfort.</Description>
-    <ImageURL>../Images/BMW_4_Series_Coupe.jpg</ImageURL>
-  </Car>
-  <Car>
-    <Id>7</Id>
-    <Brand>Mini</Brand>
-    <Model>Cooper</Model>
-    <Colour>White and Red</Colour>
-    <TypeofCar>3</TypeofCar>
-    <Transmission>2</Transmission>
-    <HorsePower>200</HorsePower>
-    <MaximumSpeed>200</MaximumSpeed>
-    <Mileage>15</Mileage>
-    <Price>25000</Price>
-    <Description>The Mini Cooper is a fun little car to drive around in the city!</Description>
-    <ImageURL>../Images/Mini Cooper.jpg</ImageURL>
-  </Car>
+  </Car>  
 </Cars>

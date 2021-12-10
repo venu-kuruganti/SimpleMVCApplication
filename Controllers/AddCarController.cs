@@ -55,7 +55,7 @@ namespace SimpleMVCApplication.Controllers
                 }
 
                 car.SaveNewCar(serverPath);
-
+                Session["AddedNewCar"] = true;
                 return RedirectToAction("Home", "Home");
             }
             else

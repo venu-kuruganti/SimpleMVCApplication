@@ -25,7 +25,7 @@ namespace SimpleMVCApplication.Controllers
             Cars cars = new Cars();
             cars.DocumentPath = Path;
 
-            if (Session["Cars"] == null)
+            if (Session["Cars"] == null || (bool)Session["AddedNewCar"])
             {
                 cars.PopulateCars();
                 Session["Cars"] = cars;
