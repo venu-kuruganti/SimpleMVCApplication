@@ -24,21 +24,25 @@
 
         <div class="col-2 text-center table-header">
             Transmission
-        </div>  
+        </div>
 
         <div class="col-2 text-center table-header">
             Price
-        </div>      
+        </div>
+
+        <div class="col-1 text-center">
+            Rebate
+        </div>
 
     </div>
     
     @foreach (Car car in Model.MyCars)
     {
 <div class="row border border-1 align-items-center p-3">
-    <div class="col-3 text-center">        
-        <img src="@car.ImageURL" class="img-thumbnail CarImage" data-bs-toggle="modal" 
+    <div class="col-3 text-center">
+        <img src="@car.ImageURL" class="img-thumbnail CarImage" data-bs-toggle="modal"
              data-bs-target="#CarDetailsModal"
-             id="@car.Id" height="100" alt="Car Photo" />        
+             id="@car.Id" height="100" alt="Car Photo" />
     </div>
 
     <div class="col-3 text-center">
@@ -54,9 +58,47 @@
     </div>
 
     <div class="col-2 text-center">
-        @String.Format("€ {0:N2}", car.Price)
+        @{ 
+
+            Car.PricePoints price = car.Price;
+
+            if (car.Rebate > 1 && car.Rebate <= 30)
+            {
+                //Do nothing
+            }
+            else if (car.Rebate > 30 && car.Rebate < 60)
+            {
+                //Go one level lower than what it is currently.
+                if ((int)price > 1)
+                {
+                    price--;
+                }
+            }
+            else if (car.Rebate > 60 && car.Rebate < 90)
+            {
+                //Go two levels lower
+                if ((int)price > 1)
+                {
+                    price = price - 2;
+                }
+            }
+            else
+            {
+                price = (Car.PricePoints) 1;
+                //price = price - 3;
+            }
+
+        }
+
+        @price
     </div>
-    
+
+    <div class="col-1 text-center">
+        @car.Rebate
+    </div>
+
+
+
 </div>
     }
 

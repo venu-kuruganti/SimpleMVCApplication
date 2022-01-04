@@ -30,10 +30,21 @@ namespace SimpleMVCApplication.Controllers
                     new SelectListItem { Text = Enum.GetName(typeof(Car.Transmission), Car.Transmission.Automatic), Value = ((int)Car.Transmission.Automatic).ToString()},
                     new SelectListItem { Text = Enum.GetName(typeof(Car.Transmission), Car.Transmission.Manual), Value = ((int)Car.Transmission.Manual).ToString()},
                     new SelectListItem { Text = Enum.GetName(typeof(Car.Transmission), Car.Transmission.Tiptronic), Value = ((int)Car.Transmission.Tiptronic).ToString()}
-                }, "Value", "Text");            
+                }, "Value", "Text");
+
+            SelectList PricePoints = new SelectList(
+                new List<SelectListItem>
+                { 
+                new SelectListItem { Text= Enum.GetName(typeof(Car.PricePoints), Car.PricePoints.VeryLow) , Value = ((int)Car.PricePoints.VeryLow).ToString() },
+                new SelectListItem { Text= Enum.GetName(typeof(Car.PricePoints), Car.PricePoints.Low) , Value = ((int)Car.PricePoints.Low).ToString() },
+                new SelectListItem { Text= Enum.GetName(typeof(Car.PricePoints), Car.PricePoints.Medium) , Value = ((int)Car.PricePoints.Medium).ToString() },
+                new SelectListItem { Text= Enum.GetName(typeof(Car.PricePoints), Car.PricePoints.High) , Value = ((int)Car.PricePoints.High).ToString() },
+                new SelectListItem { Text= Enum.GetName(typeof(Car.PricePoints), Car.PricePoints.VeryHigh) , Value = ((int)Car.PricePoints.VeryHigh).ToString() },
+                }, "Value", "Text");
 
             ViewBag.CarTypes = CarTypes;
             ViewBag.TransmissionTypes = TransmissionTypes;
+            ViewBag.PricePoints = PricePoints;
 
             return View("AddNewCar");
         }

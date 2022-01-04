@@ -10,7 +10,8 @@
     <HorsePower>335</HorsePower>
     <MaximumSpeed>250</MaximumSpeed>
     <Mileage>14 Km/Litre</Mileage>
-    <Price>45000</Price>
+    <Price>3</Price>
+    <Rebate>0</Rebate>
     <Description>The BMW Z4 is a sporty convertible for those that like to enjoy motoring. 
     It has all the latest safety features and all the conveniences desired in a modern car, including 4 cup holders!</Description>
     <ImageURL>../Images/BMW Z4.jpg</ImageURL>
@@ -25,7 +26,8 @@
     <HorsePower>181</HorsePower>
     <MaximumSpeed>180</MaximumSpeed>
     <Mileage>11.5 Km/Litre</Mileage>
-    <Price>25000</Price>
+    <Price>3</Price>
+    <Rebate>0</Rebate>
     <Description>A stunning SUV that is both comfortable and eye catching, the Kia Sportage should be part of any family.
     Comfortable over short distances as well as long distances, the Sportage can be used for everything from shopping to inter city
   driving and beyond.</Description>
@@ -41,7 +43,8 @@
     <HorsePower>181</HorsePower>
     <MaximumSpeed>217</MaximumSpeed>
     <Mileage>12/5 Km/Litre</Mileage>
-    <Price>30040</Price>
+    <Price>3</Price>
+    <Rebate>0</Rebate>
     <Description>The Mazda MX-5 is a sporty little convertible that makes driving very fun.</Description>
     <ImageURL>../Images/Mazda MX5.jpg</ImageURL>
   </Car>
@@ -55,7 +58,8 @@
     <HorsePower>550</HorsePower>
     <MaximumSpeed>309</MaximumSpeed>
     <Mileage>6.4 Km/Litre</Mileage>
-    <Price>120000</Price>
+    <Price>3</Price>
+    <Rebate>0</Rebate>
     <Description>The Lamborghini Gallardo is the most powerful car in the entire world and will blow your hair clean off! 
     So do ya feel lucky...punk?</Description>
     <ImageURL>../Images/Lamborghini.jpg</ImageURL>
@@ -70,9 +74,40 @@
     <HorsePower>228</HorsePower>
     <MaximumSpeed>243</MaximumSpeed>
     <Mileage>11.11 Km/Litre</Mileage>
-    <Price>53750</Price>
+    <Price>3</Price>
+    <Rebate>0</Rebate>
     <Description>The Audi TT is a fun little convertible to drive around your friends or to go to the office. 
     It can take you to the supermarket but it doesn't have a lot of boot capacity to store much groceries.  </Description>
     <ImageURL>../Images/Audi TT.jpg</ImageURL>
-  </Car>  
+  </Car>
+  <Car>
+    <Id>6</Id>
+    <Brand>Ferrari</Brand>
+    <Model>296 GTB</Model>
+    <Colour>White and Red</Colour>
+    <TypeofCar>2</TypeofCar>
+    <Transmission>3</Transmission>
+    <HorsePower>830</HorsePower>
+    <MaximumSpeed>320</MaximumSpeed>
+    <Mileage>10</Mileage>
+    <Price>3</Price>
+    <Rebate>0</Rebate>
+    <Description>The Ferrari is a very fast sports car with a top speed of 320 Km/Hr that takes you on a wild ride from one city to another while still arriving in time for tea! It is not for the faint of heart at any rate and only those with enough daring can get behind the wheel and open up the throttle for a wild ride. For cornering, a special course needs to be taken to make sure you don't spin out of control!</Description>
+    <ImageURL>../Images/Ferrari.jpg</ImageURL>
+  </Car>
+  <Car>
+    <Id>7</Id>
+    <Brand>Porsche</Brand>
+    <Model>Boxster</Model>
+    <Colour>Braun</Colour>
+    <TypeofCar>3</TypeofCar>
+    <Transmission>1</Transmission>
+    <HorsePower>350</HorsePower>
+    <MaximumSpeed>220</MaximumSpeed>
+    <Mileage>12</Mileage>
+    <Price>3</Price>
+    <Rebate>30</Rebate>
+    <Description>A nice car for a drive.</Description>
+    <ImageURL>../Images/Mini Cooper.jpg</ImageURL>
+  </Car>
 </Cars>

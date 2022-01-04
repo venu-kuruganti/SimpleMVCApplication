@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "ffefe78a-8a19-406b-8350-4b0a27c7a5c0": {
+      "ProjectGuid": "ffefe78a-8a19-406b-8350-4b0a27c7a5c0",
+      "DisplayName": "SimpleMVCApplication",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

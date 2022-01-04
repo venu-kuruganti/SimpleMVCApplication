@@ -1,4 +1,5 @@
-﻿@model SimpleMVCApplication.Models.Car
+﻿@using SimpleMVCApplication.Models
+@model SimpleMVCApplication.Models.Car
 
 <div class="card car-details w-100">
     <img src="@Model.ImageURL" alt="CarImage" class="card-img-top" />
@@ -70,11 +71,53 @@
         <li class="list-group-item">
             <div class="row">
                 <div class="col-6 list-group-label">
-                    Price (in Euros)
+                    Price
                 </div>
                 <div class="col-6">
-                    @String.Format("€ {0:N2}", Model.Price)
+                    @{
+
+                        Car.PricePoints price = Model.Price;
+
+                        if (Model.Rebate > 1 && Model.Rebate <= 30)
+                        {
+                            //Do nothing
+                        }
+                        else if (Model.Rebate > 30 && Model.Rebate < 60)
+                        {
+                            //Go one level lower than what it is currently.
+                            if ((int)price > 1)
+                            {
+                                price--;
+                            }
+                        }
+                        else if (Model.Rebate > 60 && Model.Rebate < 90)
+                        {
+                            //Go two levels lower
+                            if ((int)price > 1)
+                            {
+                                price = price - 2;
+                            }
+                        }
+                        else
+                        {
+                            price = (Car.PricePoints)1;
+                        }
+
+                    }
+                    @price
                 </div>
+
+            </div>
+        </li>
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col-6 list-group-label">
+                    Rebate
+                </div>
+                <div class="col-6">
+                    @Model.Rebate
+                </div>
+
             </div>
         </li>
     </ul>

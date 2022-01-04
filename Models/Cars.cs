@@ -111,7 +111,11 @@ namespace SimpleMVCApplication.Models
                                 break;
 
                             case "Price":
-                                car.Price = double.Parse(childNode.InnerText);
+                                car.Price = (Car.PricePoints) (Convert.ToInt32(childNode.InnerText));
+                                break;
+
+                            case "Rebate":
+                                car.Rebate = Convert.ToInt32(childNode.InnerText);
                                 break;
 
                             case "Description":

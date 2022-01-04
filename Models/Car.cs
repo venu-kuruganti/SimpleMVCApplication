@@ -46,12 +46,15 @@ namespace SimpleMVCApplication.Models
         [Display(Name ="Car Description")]
         public string Description { get; set; }
 
-        [Required]
-        [Display(Name ="Price")]
-        [Range(10000, 1000000)]
-        public double Price { get; set; }
+        [Required(ErrorMessage = "Please select price point")]
+        [Display(Name = "Price")]
+        public PricePoints Price { get; set; }
 
         [Required]
+        [Display(Name ="Rebate")]
+        public int Rebate { get; set; }
+
+        
         [Display(Name = "Car Photo")]
         public HttpPostedFileBase CarImage { get; set; }
 
@@ -73,6 +76,15 @@ namespace SimpleMVCApplication.Models
             Automatic = 1,
             Manual,
             Tiptronic
+        }
+
+        public enum PricePoints
+        {
+            VeryLow = 1,
+            Low,
+            Medium,
+            High,
+            VeryHigh
         }
 
         public bool SaveNewCar(string Path)
@@ -132,7 +144,11 @@ namespace SimpleMVCApplication.Models
 
 
                 child = XDoc.CreateNode(XmlNodeType.Element, "Price", null);
-                child.InnerText = Price.ToString();
+                child.InnerText = ((int)Price).ToString();
+                node.AppendChild(child);
+
+                child = XDoc.CreateNode(XmlNodeType.Element, "Rebate", null);
+                child.InnerText = Rebate.ToString();
                 node.AppendChild(child);
 
                 child = XDoc.CreateNode(XmlNodeType.Element, "Description", null);
